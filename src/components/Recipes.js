@@ -8,11 +8,13 @@ const Recipes = ({foodRecipes, handleRecipesChange}) => {
     return (
         <div className="recipes">
             <h1>Recipes</h1>
-            {foodRecipes.length > 0?<ul>
-                {foodRecipes.map((recipe, index) => {
-                    return <li key={index}>{recipe}</li>
-                })}
-            </ul>:<p>No recipes yet. Wait until we prepare them...</p>}
+            <div className="recipesList">
+                {foodRecipes.length > 0?<ul>
+                    {foodRecipes.map((recipe, index) => {
+                        return <li key={index}>{recipe}</li>
+                    })}
+                </ul>:<p>No recipes yet. Wait until we prepare them...</p>}
+            </div>
             <button onClick={() => {navigate("/")}}>Go back</button>
 
         </div>
