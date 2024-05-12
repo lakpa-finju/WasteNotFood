@@ -8,7 +8,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <NavBar />
       <Routes>
         <Route path="/" element={<Index />} />
       </Routes>
